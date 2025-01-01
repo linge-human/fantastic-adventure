@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - My Journey</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #D0E3E7; /* Light greyish-blue background */
+            color: #2F4F4F; /* Dark green text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-family: 'Luminary', sans-serif;
+            color: #556B2F; /* Dark olive green for big titles */
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        h2 {
+            font-family: 'Luminary', sans-serif;
+            color: #556B2F; /* Dark olive green for subtitles */
+            font-size: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        p, ul {
+            font-family: 'American Typewriter', serif;
+            color: #333333;
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
+            transition: color 0.5s ease-in-out;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            padding-left: 20px;
+            position: relative;
+        }
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8B0000; /* Dark red bullet points */
+            font-size: 20px;
+        }
+        .line {
+            height: 3px;
+            background-color: #8B0000; /* Dark red for dividing lines */
+            margin: 40px 0;
+        }
+        .button {
+            background-color: #556B2F; /* Dark olive green */
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+            display: block;
+        }
+        .button:hover {
+            background-color: #4B5320; /* Slightly darker olive green */
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container fade-in">
+        <h1>About Me 😀</h1>
+        <p>I am a student passionate about science, technology, leadership, and creative writing. This website showcases my journey in bioengineering, aerospace science, and personal projects. I am currently studying in high school and exploring opportunities in research and volunteer work.</p>
+
+        <div class="line"></div>
+
+        <h2>What I am looking forward to now?</h2>
+        <p><strong>Updated 31/12/2024</strong></p>
+        <ul>
+            <li>Lab volunteer work, university outreach programs for high achievers</li>
+            <li>Mentors willing to help high schoolers guide them through research projects</li>
+        </ul>
+
+        <div class="line"></div>
+
+        <h2>Projects 💻</h2>
+        <p>I am currently trying to get involved in research projects and looking forward to volunteering in university labs to gain hands-on experience and contribute to scientific discovery.</p>
+
+        <div class="line"></div>
+
+        <h2>Blog 📓</h2>
+        <p>In this section, I'll share updates, thoughts, and reflections on topics like space exploration, scientific advancements, and more. Stay tuned for my latest blog posts!</p>
+
+        <div class="line"></div>
+
+        <h2>Education 🧑‍🏫</h2>
+        <p>Currently, I am preparing for VCE and planning to pursue the Bachelor of Biomedicine at the University of Melbourne, with a focus on neuroscience and bioengineering. My aim is to contribute to advancements in these fields through research and development.</p>
+
+        <div class="line"></div>
+
+        <h2>Contact Me 📇</h2>
+        <p>If you'd like to get in touch, feel free to reach out to me via email: <a href="mailto:lingeshinice@outlook.com" class="button">Email Me</a></p>
+    </div>
+
+</body>
+</html>
