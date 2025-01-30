@@ -15,8 +15,9 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Align content to the top */
             min-height: 100vh;
+            padding-top: 50px; /* Add padding for spacing */
         }
 
         /* Container for content */
@@ -24,10 +25,11 @@
             width: 90%;
             max-width: 1200px;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.6); /* Darker background for contrast */
             border-radius: 15px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px); /* Stronger blur effect */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 50px; /* Add margin for spacing */
         }
 
         h1 {
@@ -40,10 +42,9 @@
 
         /* Section Grid */
         .section-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            padding-top: 20px;
+            display: flex;
+            flex-direction: column; /* Stack sections vertically */
+            gap: 30px; /* Add spacing between sections */
         }
 
         /* Individual Floating Boxes */
@@ -51,8 +52,8 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 25px;
             border-radius: 12px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(15px); /* Stronger blur for readability */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             text-align: center;
@@ -60,7 +61,7 @@
 
         .section:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
 
         /* Section Titles */
@@ -109,7 +110,7 @@
             text-decoration: none;
             font-size: 18px;
             border-radius: 8px;
-            display: block;
+            display: inline-block;
             text-align: center;
             margin-top: 15px;
             transition: background 0.3s ease, transform 0.3s ease;
@@ -140,30 +141,33 @@
             <div class="section" onclick="window.location.href='#';">
                 <h2>What I'm Looking Forward To</h2>
                 <ul>
-                    <li>Lab research & university outreach</li>
-                    <li>Finding mentors for research</li>
-                    <li>Publishing my books</li>
+                    <li>Lab research & university outreach: I am eager to dive into hands-on experiments and collaborate with academic institutions to expand my knowledge.</li>
+                    <li>Finding mentors for research: Connecting with experienced researchers to guide me in my scientific journey is a top priority.</li>
+                    <li>Publishing my books: I am working on a series of books that explore the intersection of science, philosophy, and creativity.</li>
                 </ul>
             </div>
 
             <div class="section" onclick="window.location.href='#';">
                 <h2>Projects</h2>
-                <p>I am running an English tutoring business and actively seeking research experience in biomedical sciences and aerospace engineering.</p>
+                <p>I am currently running an English tutoring business, helping students improve their language skills and achieve academic success. Additionally, I am actively seeking research opportunities in biomedical sciences and aerospace engineering to contribute to groundbreaking discoveries.</p>
+                <p>One of my ongoing projects involves developing a machine learning model to analyze biological data, which could revolutionize personalized medicine.</p>
             </div>
 
             <div class="section" onclick="window.location.href='#';">
                 <h2>Blog 📓</h2>
-                <p>Here, I'll share my thoughts on science, space, and literature. Stay tuned!</p>
+                <p>Welcome to my blog! Here, I share my thoughts on a wide range of topics, including the latest advancements in science, the mysteries of space, and the beauty of literature. Stay tuned for regular updates and deep dives into fascinating subjects.</p>
+                <p>Upcoming posts: "The Future of AI in Medicine" and "Exploring the Cosmos: A Journey Through Space and Time."</p>
             </div>
 
             <div class="section" onclick="window.location.href='#';">
                 <h2>Education 🧑‍🏫</h2>
-                <p>Currently preparing for VCE. Future focus: neuroscience, AI-driven bioengineering, and aerospace research.</p>
+                <p>I am currently preparing for the VCE (Victorian Certificate of Education) with a focus on subjects like mathematics, physics, and chemistry. My future academic goals include pursuing studies in neuroscience, AI-driven bioengineering, and aerospace research.</p>
+                <p>I am particularly interested in how artificial intelligence can be integrated into biological systems to solve complex problems and improve human health.</p>
             </div>
 
             <div class="section" onclick="window.location.href='mailto:lingeshinice@outlook.com';">
                 <h2>Contact Me 📇</h2>
-                <p>Want to collaborate? Let's connect.</p>
+                <p>If you're interested in collaborating on a project, discussing ideas, or just want to connect, feel free to reach out. I'm always open to new opportunities and conversations.</p>
                 <a href="mailto:lingeshinice@outlook.com" class="button">Email Me</a>
             </div>
 
