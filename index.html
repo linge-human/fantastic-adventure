@@ -3,165 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - My Journey</title>
+    <title>My Universe</title>
     <style>
+        /* Background Styling */
         body {
-            font-family: 'Courier New', Courier, monospace;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Monet_Water_Lilies_1916.jpg') no-repeat center center fixed, 
-                        url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg') no-repeat center center fixed, 
-                        url('https://images-assets.nasa.gov/image/PIA23122/PIA23122~orig.jpg') no-repeat center center fixed;
+            font-family: 'Georgia', serif;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Monet_Water_Lilies_1916.jpg') no-repeat center center fixed,
+                        url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg') no-repeat center center fixed,
+                        url('https://images-assets.nasa.gov/image/PIA23122/PIA23122~orig.jpg') no-repeat center center fixed,
+                        url('https://wallpaperaccess.com/full/460272.jpg') no-repeat center center fixed, /* LOTR */
+                        url('https://wallpaperaccess.com/full/123494.jpg') no-repeat center center fixed, /* Harry Potter */
+                        url('https://images.nasa.gov/r-thumbnails/PIA03653~orig.jpg') no-repeat center center fixed;
             background-size: cover;
-            background-blend-mode: multiply;
-            background-color: rgba(10, 10, 30, 0.9); /* Dark navy with transparency */
-            color: #E0E0E0; /* Light grey text */
+            background-blend-mode: overlay;
+            background-color: rgba(20, 30, 60, 0.85); /* Deep, space blue overlay */
+            color: #F1F1F1;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
         }
+
+        /* Container for content */
         .container {
             width: 80%;
             max-width: 1000px;
-            padding: 30px;
-            background-color: rgba(20, 20, 40, 0.8); /* Semi-transparent dark navy */
+            padding: 20px;
+            background: rgba(30, 40, 80, 0.6); /* Adapts to background images */
             border-radius: 15px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
         }
+
         h1 {
-            font-family: 'Luminary', sans-serif;
-            color: #A8D8EA; /* Soft blue for big titles */
-            font-size: 50px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 45px;
             text-align: center;
+            color: #FFD700; /* Gold - gives a magical feel */
+            font-family: 'Garamond', serif;
         }
+
+        /* Section Grid */
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        /* Individual Floating Boxes */
+        .section {
+            width: 45%;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+        }
+
+        /* Section Titles */
         h2 {
-            font-family: 'Luminary', sans-serif;
-            color: #A8D8EA; /* Soft blue for subtitles */
-            font-size: 30px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            color: #A8D8EA; /* Soft Blue */
             text-align: center;
             cursor: pointer;
-            transition: transform 0.3s ease, color 0.3s ease;
+            transition: color 0.3s ease, transform 0.2s ease;
         }
+
         h2:hover {
             transform: scale(1.05);
-            color: #FF6F61; /* Coral on hover */
+            color: #FF6F61; /* Warm Coral */
         }
+
+        /* Text Styling */
         p, ul {
-            font-family: 'American Typewriter', serif;
-            color: #E0E0E0; /* Light grey text */
-            font-size: 18px;
-            line-height: 1.8;
+            font-size: 16px;
+            line-height: 1.7;
             text-align: justify;
-            transition: color 0.5s ease-in-out;
         }
+
         ul {
             list-style-type: none;
-            padding-left: 0;
+            padding: 0;
         }
+
         li {
             padding-left: 20px;
             position: relative;
         }
+
         li::before {
             content: "•";
             position: absolute;
             left: 0;
-            color: #FF6F61; /* Coral bullet points */
+            color: #FFD700; /* Gold */
             font-size: 20px;
         }
-        .line {
-            height: 2px;
-            background: linear-gradient(90deg, #A8D8EA, #FF6F61); /* Gradient line */
-            margin: 40px 0;
-            opacity: 0.7;
-        }
+
+        /* Button Styling */
         .button {
-            background-color: #A8D8EA; /* Soft blue */
-            color: #1A1A2E; /* Dark navy text */
-            padding: 12px 25px;
+            background-color: #A8D8EA;
+            color: #1A1A2E;
+            padding: 10px 20px;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 18px;
             border-radius: 8px;
-            display: inline-block;
-            margin-top: 25px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            text-align: center;
             display: block;
+            text-align: center;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
+
         .button:hover {
-            background-color: #FF6F61; /* Coral on hover */
+            background: #FF6F61;
             transform: scale(1.05);
         }
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        .fade-in {
-            animation: fadeIn 1s ease-out;
-        }
-        .section {
-            margin: 40px 0;
-            padding: 20px;
-            border-left: 4px solid #FF6F61; /* Coral accent line */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .section:hover {
-            transform: translateX(10px);
-        }
+
     </style>
 </head>
 <body>
 
-    <div class="container fade-in">
-        <h1>About Me 😀</h1>
-        <p>Thanks to those who see this. This is the first website I created, and it will be improved through time. I am a student passionate about science, technology, leadership, and creative writing. This website showcases my journey in bioengineering, aerospace science, and personal projects. I am currently studying in high school and exploring opportunities in research and volunteer work.</p>
+    <div class="container">
+        <h1>My Universe 🌌</h1>
+        <p style="text-align: center;">This is my personal space—blending science, art, and fantasy.</p>
 
-        <div class="line"></div>
+        <div class="section-container">
+            
+            <div class="section" onclick="window.location.href='#';">
+                <h2>What I'm Looking Forward To</h2>
+                <ul>
+                    <li>Lab research & university outreach</li>
+                    <li>Finding mentors for research</li>
+                    <li>Publishing my books</li>
+                </ul>
+            </div>
 
-        <div class="section" onclick="window.location.href='#';">
-            <h2>What I am looking forward to now?</h2>
-            <p><strong>Updated 1/2/2025</strong></p>
-            <ul>
-                <li>Lab volunteer work, university outreach programs for high achievers</li>
-                <li>Mentors willing to help high schoolers guide them through research projects</li>
-                <li>Publishing my books</li>
-            </ul>
+            <div class="section" onclick="window.location.href='#';">
+                <h2>Projects</h2>
+                <p>I am running an English tutoring business and actively seeking research experience in biomedical sciences and aerospace engineering.</p>
+            </div>
+
+            <div class="section" onclick="window.location.href='#';">
+                <h2>Blog 📓</h2>
+                <p>Here, I'll share my thoughts on science, space, and literature. Stay tuned!</p>
+            </div>
+
+            <div class="section" onclick="window.location.href='#';">
+                <h2>Education 🧑‍🏫</h2>
+                <p>Currently preparing for VCE. Future focus: neuroscience, AI-driven bioengineering, and aerospace research.</p>
+            </div>
+
+            <div class="section" onclick="window.location.href='mailto:lingeshinice@outlook.com';">
+                <h2>Contact Me 📇</h2>
+                <p>Want to collaborate? Let's connect.</p>
+                <a href="mailto:lingeshinice@outlook.com" class="button">Email Me</a>
+            </div>
+
         </div>
 
-        <div class="line"></div>
-
-        <div class="section" onclick="window.location.href='#';">
-            <h2>Projects 💻</h2>
-            <p>I have started a small business teaching English, working with students from diverse backgrounds. This experience has not only allowed me to develop valuable communication and teaching skills but has also provided me with a source of income. As I continue to grow my business, I aim to expand my reach and refine my teaching methods to better support my students in their language-learning journey. I am currently trying to get involved in research projects and looking forward to volunteering in university labs to gain hands-on experience and contribute to scientific discovery.</p>
-        </div>
-
-        <div class="line"></div>
-
-        <div class="section" onclick="window.location.href='#';">
-            <h2>Blog 📓</h2>
-            <p>In this section, I'll share updates, thoughts, and reflections on topics like space exploration, scientific advancements, and more. Stay tuned for my latest blog posts!</p>
-        </div>
-
-        <div class="line"></div>
-
-        <div class="section" onclick="window.location.href='#';">
-            <h2>Education 🧑‍🏫</h2>
-            <p>Currently, I am preparing for VCE and planning to pursue the Bachelor of Biomedicine at the University of Melbourne, with a focus on neuroscience and bioengineering. My aim is to contribute to advancements in these fields through research and development.</p>
-        </div>
-
-        <div class="line"></div>
-
-        <div class="section" onclick="window.location.href='mailto:lingeshinice@outlook.com';">
-            <h2>Contact Me 📇</h2>
-            <p>If you'd like to get in touch, feel free to reach out to me via email<3: <a href="mailto:lingeshinice@outlook.com" class="button">Email Me</a></p>
-        </div>
     </div>
 
 </body>
