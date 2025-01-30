@@ -32,11 +32,20 @@
         }
 
         h1 {
-            font-size: 50px;
+            font-size: 48px;
             text-align: center;
             color: #FFD700; /* Gold */
             font-family: 'Garamond', serif;
             margin-bottom: 20px;
+            letter-spacing: 1.5px;
+        }
+
+        .tagline {
+            text-align: center;
+            font-size: 18px;
+            color: #A8D8EA; /* Soft Blue */
+            margin-bottom: 40px;
+            font-style: italic;
         }
 
         /* Section Grid */
@@ -65,7 +74,7 @@
 
         /* Section Titles */
         h2 {
-            font-size: 26px;
+            font-size: 24px;
             color: #A8D8EA; /* Soft Blue */
             text-align: center;
             margin-bottom: 15px;
@@ -81,6 +90,7 @@
             font-size: 16px;
             line-height: 1.7;
             text-align: justify;
+            color: #F1F1F1;
         }
 
         ul {
@@ -107,7 +117,7 @@
             color: #1A1A2E;
             padding: 12px 24px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             border-radius: 8px;
             display: block;
             text-align: center;
@@ -127,7 +137,7 @@
             margin-bottom: 15px;
         }
 
-        /* Dark Academia Theme Enhancements */
+        /* Background Images for Sections */
         .section:nth-child(1) {
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Monet_Water_Lilies_1916.jpg');
             background-size: cover;
@@ -162,38 +172,38 @@
 <body>
 
     <div class="container">
-        <h1>My Universe 🌌</h1>
-        <p style="text-align: center;">A fusion of art, science, and imagination.</p>
+        <h1>My Universe</h1>
+        <p class="tagline">Exploring the intersection of art, science, and imagination.</p>
 
         <div class="section-container">
             
             <div class="section" onclick="window.location.href='#';">
                 <h2>What I'm Looking Forward To</h2>
                 <ul>
-                    <li>Lab research & university outreach</li>
-                    <li>Finding mentors for research</li>
+                    <li>Lab research and university outreach</li>
+                    <li>Finding mentors for research projects</li>
                     <li>Publishing my books</li>
                 </ul>
             </div>
 
             <div class="section" onclick="window.location.href='#';">
                 <h2>Projects</h2>
-                <p>I am running an English tutoring business and actively seeking research experience in biomedical sciences and aerospace engineering.</p>
+                <p>I run an English tutoring business and am actively pursuing research opportunities in biomedical sciences and aerospace engineering.</p>
             </div>
 
             <div class="section" onclick="window.location.href='#';">
-                <h2>Blog 📓</h2>
-                <p>Here, I'll share my thoughts on science, space, and literature. Stay tuned!</p>
+                <h2>Blog</h2>
+                <p>Sharing insights on science, space, and literature. Stay tuned for updates!</p>
             </div>
 
             <div class="section" onclick="window.location.href='#';">
-                <h2>Education 🧑‍🏫</h2>
+                <h2>Education</h2>
                 <p>Currently preparing for VCE. Future focus: neuroscience, AI-driven bioengineering, and aerospace research.</p>
             </div>
 
             <div class="section" onclick="window.location.href='mailto:lingeshinice@outlook.com';">
-                <h2>Contact Me 📇</h2>
-                <p>Want to collaborate? Let's connect.</p>
+                <h2>Contact Me</h2>
+                <p>Interested in collaboration? Let's connect.</p>
                 <a href="mailto:lingeshinice@outlook.com" class="button">Email Me</a>
             </div>
 
