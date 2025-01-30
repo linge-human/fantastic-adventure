@@ -7,8 +7,13 @@
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #D0E3E7; /* Light greyish-blue background */
-            color: #2F4F4F; /* Dark green text */
+            background: url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Monet_Water_Lilies_1916.jpg') no-repeat center center fixed, 
+                        url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg') no-repeat center center fixed, 
+                        url('https://images-assets.nasa.gov/image/PIA23122/PIA23122~orig.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-color: rgba(10, 10, 30, 0.9); /* Dark navy with transparency */
+            color: #E0E0E0; /* Light grey text */
             margin: 0;
             padding: 0;
             display: flex;
@@ -21,13 +26,14 @@
             width: 80%;
             max-width: 1000px;
             padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: rgba(20, 20, 40, 0.8); /* Semi-transparent dark navy */
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
         }
         h1 {
             font-family: 'Luminary', sans-serif;
-            color: #556B2F; /* Dark olive green for big titles */
+            color: #A8D8EA; /* Soft blue for big titles */
             font-size: 50px;
             margin-bottom: 20px;
             text-transform: uppercase;
@@ -36,14 +42,20 @@
         }
         h2 {
             font-family: 'Luminary', sans-serif;
-            color: #556B2F; /* Dark olive green for subtitles */
+            color: #A8D8EA; /* Soft blue for subtitles */
             font-size: 30px;
             margin-bottom: 10px;
             text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        h2:hover {
+            transform: scale(1.05);
+            color: #FF6F61; /* Coral on hover */
         }
         p, ul {
             font-family: 'American Typewriter', serif;
-            color: #333333;
+            color: #E0E0E0; /* Light grey text */
             font-size: 18px;
             line-height: 1.8;
             text-align: justify;
@@ -61,17 +73,18 @@
             content: "•";
             position: absolute;
             left: 0;
-            color: #8B0000; /* Dark red bullet points */
+            color: #FF6F61; /* Coral bullet points */
             font-size: 20px;
         }
         .line {
-            height: 3px;
-            background-color: #8B0000; /* Dark red for dividing lines */
+            height: 2px;
+            background: linear-gradient(90deg, #A8D8EA, #FF6F61); /* Gradient line */
             margin: 40px 0;
+            opacity: 0.7;
         }
         .button {
-            background-color: #556B2F; /* Dark olive green */
-            color: white;
+            background-color: #A8D8EA; /* Soft blue */
+            color: #1A1A2E; /* Dark navy text */
             padding: 12px 25px;
             text-decoration: none;
             font-size: 20px;
@@ -83,7 +96,7 @@
             display: block;
         }
         .button:hover {
-            background-color: #4B5320; /* Slightly darker olive green */
+            background-color: #FF6F61; /* Coral on hover */
             transform: scale(1.05);
         }
         @keyframes fadeIn {
@@ -93,43 +106,62 @@
         .fade-in {
             animation: fadeIn 1s ease-out;
         }
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 4px solid #FF6F61; /* Coral accent line */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateX(10px);
+        }
     </style>
 </head>
 <body>
 
     <div class="container fade-in">
         <h1>About Me 😀</h1>
-        <p>thanks to those who see this. this is the first website i created and it will be improved through time. I am a student passionate about science, technology, leadership, and creative writing. This website showcases my journey in bioengineering, aerospace science, and personal projects. I am currently studying in high school and exploring opportunities in research and volunteer work.</p>
+        <p>Thanks to those who see this. This is the first website I created, and it will be improved through time. I am a student passionate about science, technology, leadership, and creative writing. This website showcases my journey in bioengineering, aerospace science, and personal projects. I am currently studying in high school and exploring opportunities in research and volunteer work.</p>
 
         <div class="line"></div>
 
-        <h2>What I am looking forward to now?</h2>
-        <p><strong>Updated 1/2/2025</strong></p>
-        <ul>
-            <li>Lab volunteer work, university outreach programs for high achievers</li>
-            <li>Mentors willing to help high schoolers guide them through research projects</li>
-            <li>publishing my books</li>
-        </ul>
+        <div class="section" onclick="window.location.href='#';">
+            <h2>What I am looking forward to now?</h2>
+            <p><strong>Updated 1/2/2025</strong></p>
+            <ul>
+                <li>Lab volunteer work, university outreach programs for high achievers</li>
+                <li>Mentors willing to help high schoolers guide them through research projects</li>
+                <li>Publishing my books</li>
+            </ul>
+        </div>
 
         <div class="line"></div>
 
-        <h2>Projects 💻</h2>
-        <p>I have started a small business teaching English, working with students from diverse backgrounds. This experience has not only allowed me to develop valuable communication and teaching skills but has also provided me with a source of income. As I continue to grow my business, I aim to expand my reach and refine my teaching methods to better support my students in their language-learning journey.I am currently trying to get involved in research projects and looking forward to volunteering in university labs to gain hands-on experience and contribute to scientific discovery.</p>
+        <div class="section" onclick="window.location.href='#';">
+            <h2>Projects 💻</h2>
+            <p>I have started a small business teaching English, working with students from diverse backgrounds. This experience has not only allowed me to develop valuable communication and teaching skills but has also provided me with a source of income. As I continue to grow my business, I aim to expand my reach and refine my teaching methods to better support my students in their language-learning journey. I am currently trying to get involved in research projects and looking forward to volunteering in university labs to gain hands-on experience and contribute to scientific discovery.</p>
+        </div>
 
         <div class="line"></div>
 
-        <h2>Blog 📓</h2>
-        <p>In this section, I'll share updates, thoughts, and reflections on topics like space exploration, scientific advancements, and more. Stay tuned for my latest blog posts!</p>
+        <div class="section" onclick="window.location.href='#';">
+            <h2>Blog 📓</h2>
+            <p>In this section, I'll share updates, thoughts, and reflections on topics like space exploration, scientific advancements, and more. Stay tuned for my latest blog posts!</p>
+        </div>
 
         <div class="line"></div>
 
-        <h2>Education 🧑‍🏫</h2>
-        <p>Currently, I am preparing for VCE and planning to pursue the Bachelor of Biomedicine at the University of Melbourne, with a focus on neuroscience and bioengineering. My aim is to contribute to advancements in these fields through research and development.</p>
+        <div class="section" onclick="window.location.href='#';">
+            <h2>Education 🧑‍🏫</h2>
+            <p>Currently, I am preparing for VCE and planning to pursue the Bachelor of Biomedicine at the University of Melbourne, with a focus on neuroscience and bioengineering. My aim is to contribute to advancements in these fields through research and development.</p>
+        </div>
 
         <div class="line"></div>
-        
-        <h2>Contact Me 📇</h2>
-        <p>If you'd like to get in touch, feel free to reach out to me via email<3: <a href="mailto:lingeshinice@outlook.com" class="button">Email Me</a></p>
+
+        <div class="section" onclick="window.location.href='mailto:lingeshinice@outlook.com';">
+            <h2>Contact Me 📇</h2>
+            <p>If you'd like to get in touch, feel free to reach out to me via email<3: <a href="mailto:lingeshinice@outlook.com" class="button">Email Me</a></p>
+        </div>
     </div>
 
 </body>
