@@ -8,8 +8,7 @@
         /* General Styling */
         body {
             font-family: 'Georgia', serif;
-            background: linear-gradient(rgba(20, 30, 60, 0.9), rgba(20, 30, 60, 0.9)), 
-                        url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80') no-repeat center center fixed;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #F1F1F1;
             margin: 0;
@@ -25,27 +24,18 @@
             width: 90%;
             max-width: 1200px;
             padding: 30px;
-            background: rgba(30, 40, 80, 0.7);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(15px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 50px;
             text-align: center;
             color: #FFD700; /* Gold */
             font-family: 'Garamond', serif;
             margin-bottom: 20px;
-            letter-spacing: 1.5px;
-        }
-
-        .tagline {
-            text-align: center;
-            font-size: 18px;
-            color: #A8D8EA; /* Soft Blue */
-            margin-bottom: 40px;
-            font-style: italic;
         }
 
         /* Section Grid */
@@ -61,28 +51,28 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            text-align: center;
         }
 
         .section:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
 
         /* Section Titles */
         h2 {
-            font-size: 24px;
-            color: #A8D8EA; /* Soft Blue */
-            text-align: center;
+            font-size: 26px;
+            color: #FFD700; /* Gold */
             margin-bottom: 15px;
             transition: color 0.3s ease;
         }
 
         .section:hover h2 {
-            color: #FF6F61; /* Warm Coral */
+            color: #A8D8EA; /* Soft Blue */
         }
 
         /* Text Styling */
@@ -113,20 +103,21 @@
 
         /* Button Styling */
         .button {
-            background-color: #A8D8EA;
-            color: #1A1A2E;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #F1F1F1;
             padding: 12px 24px;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 18px;
             border-radius: 8px;
             display: block;
             text-align: center;
             margin-top: 15px;
             transition: background 0.3s ease, transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .button:hover {
-            background: #FF6F61;
+            background: rgba(255, 255, 255, 0.2);
             transform: scale(1.05);
         }
 
@@ -136,74 +127,43 @@
             border-radius: 8px;
             margin-bottom: 15px;
         }
-
-        /* Background Images for Sections */
-        .section:nth-child(1) {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Monet_Water_Lilies_1916.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .section:nth-child(2) {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .section:nth-child(3) {
-            background-image: url('https://images-assets.nasa.gov/image/PIA23122/PIA23122~orig.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .section:nth-child(4) {
-            background-image: url('https://images.nasa.gov/r-thumbnails/PIA03653~orig.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .section:nth-child(5) {
-            background-image: url('https://images.unsplash.com/photo-1505506874110-6a7a69069a08?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
-            background-size: cover;
-            background-position: center;
-        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>My Universe</h1>
-        <p class="tagline">Exploring the intersection of art, science, and imagination.</p>
+        <h1>My Universe 🌌</h1>
+        <p style="text-align: center;">A fusion of art, science, and imagination.</p>
 
         <div class="section-container">
             
             <div class="section" onclick="window.location.href='#';">
                 <h2>What I'm Looking Forward To</h2>
                 <ul>
-                    <li>Lab research and university outreach</li>
-                    <li>Finding mentors for research projects</li>
+                    <li>Lab research & university outreach</li>
+                    <li>Finding mentors for research</li>
                     <li>Publishing my books</li>
                 </ul>
             </div>
 
             <div class="section" onclick="window.location.href='#';">
                 <h2>Projects</h2>
-                <p>I run an English tutoring business and am actively pursuing research opportunities in biomedical sciences and aerospace engineering.</p>
+                <p>I am running an English tutoring business and actively seeking research experience in biomedical sciences and aerospace engineering.</p>
             </div>
 
             <div class="section" onclick="window.location.href='#';">
-                <h2>Blog</h2>
-                <p>Sharing insights on science, space, and literature. Stay tuned for updates!</p>
+                <h2>Blog 📓</h2>
+                <p>Here, I'll share my thoughts on science, space, and literature. Stay tuned!</p>
             </div>
 
             <div class="section" onclick="window.location.href='#';">
-                <h2>Education</h2>
+                <h2>Education 🧑‍🏫</h2>
                 <p>Currently preparing for VCE. Future focus: neuroscience, AI-driven bioengineering, and aerospace research.</p>
             </div>
 
             <div class="section" onclick="window.location.href='mailto:lingeshinice@outlook.com';">
-                <h2>Contact Me</h2>
-                <p>Interested in collaboration? Let's connect.</p>
+                <h2>Contact Me 📇</h2>
+                <p>Want to collaborate? Let's connect.</p>
                 <a href="mailto:lingeshinice@outlook.com" class="button">Email Me</a>
             </div>
 
