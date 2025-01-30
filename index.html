@@ -5,18 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Universe</title>
     <style>
-        /* Background Styling */
+        /* General Styling */
         body {
             font-family: 'Georgia', serif;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Monet_Water_Lilies_1916.jpg') no-repeat center center fixed,
-                        url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg') no-repeat center center fixed,
-                        url('https://images-assets.nasa.gov/image/PIA23122/PIA23122~orig.jpg') no-repeat center center fixed,
-                        url('https://wallpaperaccess.com/full/460272.jpg') no-repeat center center fixed, /* LOTR */
-                        url('https://wallpaperaccess.com/full/123494.jpg') no-repeat center center fixed, /* Harry Potter */
-                        url('https://images.nasa.gov/r-thumbnails/PIA03653~orig.jpg') no-repeat center center fixed;
+            background: linear-gradient(rgba(20, 30, 60, 0.9), rgba(20, 30, 60, 0.9)), 
+                        url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80') no-repeat center center fixed;
             background-size: cover;
-            background-blend-mode: overlay;
-            background-color: rgba(20, 30, 60, 0.85); /* Deep, space blue overlay */
             color: #F1F1F1;
             margin: 0;
             padding: 0;
@@ -28,59 +22,57 @@
 
         /* Container for content */
         .container {
-            width: 80%;
-            max-width: 1000px;
-            padding: 20px;
-            background: rgba(30, 40, 80, 0.6); /* Adapts to background images */
+            width: 90%;
+            max-width: 1200px;
+            padding: 30px;
+            background: rgba(30, 40, 80, 0.7);
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(15px);
         }
 
         h1 {
-            font-size: 45px;
+            font-size: 50px;
             text-align: center;
-            color: #FFD700; /* Gold - gives a magical feel */
+            color: #FFD700; /* Gold */
             font-family: 'Garamond', serif;
+            margin-bottom: 20px;
         }
 
         /* Section Grid */
         .section-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             padding-top: 20px;
         }
 
         /* Individual Floating Boxes */
         .section {
-            width: 45%;
-            min-width: 300px;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
 
         .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
         }
 
         /* Section Titles */
         h2 {
-            font-size: 24px;
+            font-size: 26px;
             color: #A8D8EA; /* Soft Blue */
             text-align: center;
-            cursor: pointer;
-            transition: color 0.3s ease, transform 0.2s ease;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
         }
 
-        h2:hover {
-            transform: scale(1.05);
+        .section:hover h2 {
             color: #FF6F61; /* Warm Coral */
         }
 
@@ -113,12 +105,13 @@
         .button {
             background-color: #A8D8EA;
             color: #1A1A2E;
-            padding: 10px 20px;
+            padding: 12px 24px;
             text-decoration: none;
             font-size: 18px;
             border-radius: 8px;
             display: block;
             text-align: center;
+            margin-top: 15px;
             transition: background 0.3s ease, transform 0.3s ease;
         }
 
@@ -127,13 +120,50 @@
             transform: scale(1.05);
         }
 
+        /* Image Styling */
+        .section img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Dark Academia Theme Enhancements */
+        .section:nth-child(1) {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Monet_Water_Lilies_1916.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section:nth-child(2) {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section:nth-child(3) {
+            background-image: url('https://images-assets.nasa.gov/image/PIA23122/PIA23122~orig.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section:nth-child(4) {
+            background-image: url('https://images.nasa.gov/r-thumbnails/PIA03653~orig.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section:nth-child(5) {
+            background-image: url('https://images.unsplash.com/photo-1505506874110-6a7a69069a08?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>My Universe 🌌</h1>
-        <p style="text-align: center;">This is my personal space—blending science, art, and fantasy.</p>
+        <p style="text-align: center;">A fusion of art, science, and imagination.</p>
 
         <div class="section-container">
             
