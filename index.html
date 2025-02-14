@@ -8,8 +8,7 @@
         /* General Styling */
         body {
             font-family: 'Georgia', serif;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #1a1a1a; /* Dark background */
             color: #F1F1F1;
             margin: 0;
             padding: 0;
@@ -25,7 +24,7 @@
             width: 90%;
             max-width: 1200px;
             padding: 30px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.8); /* Darker background for contrast */
             border-radius: 15px;
             backdrop-filter: blur(20px);
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
@@ -35,9 +34,21 @@
         h1 {
             font-size: 50px;
             text-align: center;
-            color: #FFD700;
+            color: #FFD700; /* Gold */
             font-family: 'Garamond', serif;
             margin-bottom: 20px;
+        }
+
+        /* Zigzag Divider */
+        .zigzag {
+            position: relative;
+            height: 20px;
+            background: linear-gradient(135deg, #FFD700 25%, transparent 25%) -20px 0,
+                        linear-gradient(225deg, #FFD700 25%, transparent 25%) -20px 0,
+                        linear-gradient(315deg, #FFD700 25%, transparent 25%),
+                        linear-gradient(45deg, #FFD700 25%, transparent 25%);
+            background-size: 40px 40px;
+            margin: 30px 0;
         }
 
         /* Section Grid */
@@ -73,7 +84,7 @@
         }
 
         .section:hover h2 {
-            color: #A8D8EA;
+            color: #A8D8EA; /* Soft Blue */
         }
 
         /* Text Styling */
@@ -122,7 +133,15 @@
             transform: scale(1.05);
         }
 
-        /* PDF and Notion Access Form */
+        /* Crow Icons */
+        .crow-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Access Form */
         .access-form {
             margin-top: 20px;
             text-align: center;
@@ -158,37 +177,54 @@
         <h1>My Universe 🌌</h1>
         <p style="text-align: center;">A fusion of art, science, and imagination.</p>
 
+        <div class="zigzag"></div>
+
         <div class="section-container">
             
-            <div class="section" onclick="window.location.href='looking-forward.html';">
-                <h2>What I'm Looking Forward To</h2>
-                <ul>
-                    <li>Lab research, work experiences & university outreach: I am currently looking forward to engaging in hands-on work in health and engineering.</li>
-                    <li>Finding mentors for research: Connecting with experienced researchers to guide me in my scientific journey is a top priority.</li>
-                    <li>Publishing my books: I am working on a series of books that explore the intersection of science, philosophy, and creativity.</li>
-                </ul>
+            <!-- About Me Section -->
+            <div class="section" onclick="window.location.href='about-me.html';">
+                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">About Me</h2>
+                <p>Hello there! I'm a passionate individual exploring the intersections of science, art, and technology. Click here to learn more about me.</p>
             </div>
 
-            <div class="section" onclick="window.location.href='projects.html';">
-                <h2>Projects</h2>
-                <p>I am currently running an English tutoring business, helping students improve their language skills and achieve academic success. Outside of school, this is my primary focus, and I’m dedicated to making a positive impact through education.</p>
-            </div>
+            <div class="zigzag"></div>
 
+            <!-- Education Section -->
             <div class="section" onclick="window.location.href='education.html';">
-                <h2>Education �‍🏫</h2>
-                <p>I am currently preparing for the VCE (Victorian Certificate of Education) with a focus on subjects like mathematics, physics, and chemistry. My future academic goals include pursuing studies in neuroscience, AI-driven bioengineering, and aerospace research.</p>
-                <p>I am particularly interested in how artificial intelligence can be integrated into biological systems to solve complex problems and improve human health.</p>
+                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">Education</h2>
+                <p>Currently preparing for the VCE with a focus on mathematics, physics, and chemistry. Click here to explore my academic journey.</p>
             </div>
 
+            <div class="zigzag"></div>
+
+            <!-- Projects Section -->
+            <div class="section" onclick="window.location.href='projects.html';">
+                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">Projects</h2>
+                <p>I run an English tutoring business and am dedicated to helping students achieve academic success. Click here to see my projects.</p>
+            </div>
+
+            <div class="zigzag"></div>
+
+            <!-- Looking Forward Section -->
+            <div class="section" onclick="window.location.href='looking-forward.html';">
+                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">What I'm Looking Forward To</h2>
+                <p>Lab research, finding mentors, and publishing my books. Click here to see my future goals.</p>
+            </div>
+
+            <div class="zigzag"></div>
+
+            <!-- Contact Me Section -->
             <div class="section" onclick="window.location.href='contact.html';">
-                <h2>Contact Me 📇</h2>
-                <p>If you're interested in collaborating on a project, discussing ideas, or just want to connect, feel free to reach out. I'm always open to new opportunities and conversations.</p>
+                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">Contact Me</h2>
+                <p>Feel free to reach out for collaborations or conversations. Click here to contact me.</p>
                 <a href="mailto:lingeshinice@outlook.com" class="button">Email Me</a>
             </div>
 
+            <div class="zigzag"></div>
+
             <!-- Notion Page Access Section -->
             <div class="section">
-                <h2>Notion Page</h2>
+                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">Notion Page</h2>
                 <p>Access my Notion page by entering the activation code below:</p>
                 <div class="access-form">
                     <input type="text" id="notionCode" placeholder="Enter Activation Code">
@@ -196,9 +232,11 @@
                 </div>
             </div>
 
-            <!-- PDF Resume Section -->
+            <div class="zigzag"></div>
+
+            <!-- Resume Access Section -->
             <div class="section">
-                <h2>Resume</h2>
+                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">Resume</h2>
                 <p>Access my resume by entering the activation code below:</p>
                 <div class="access-form">
                     <input type="text" id="resumeCode" placeholder="Enter Activation Code">
