@@ -15,9 +15,9 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Align content to the top */
+            align-items: flex-start;
             min-height: 100vh;
-            padding-top: 50px; /* Add padding for spacing */
+            padding-top: 50px;
         }
 
         /* Container for content */
@@ -25,17 +25,17 @@
             width: 90%;
             max-width: 1200px;
             padding: 30px;
-            background: rgba(0, 0, 0, 0.6); /* Darker background for contrast */
+            background: rgba(0, 0, 0, 0.6);
             border-radius: 15px;
-            backdrop-filter: blur(20px); /* Stronger blur effect */
+            backdrop-filter: blur(20px);
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-            margin-bottom: 50px; /* Add margin for spacing */
+            margin-bottom: 50px;
         }
 
         h1 {
             font-size: 50px;
             text-align: center;
-            color: #FFD700; /* Gold */
+            color: #FFD700;
             font-family: 'Garamond', serif;
             margin-bottom: 20px;
         }
@@ -43,8 +43,8 @@
         /* Section Grid */
         .section-container {
             display: flex;
-            flex-direction: column; /* Stack sections vertically */
-            gap: 30px; /* Add spacing between sections */
+            flex-direction: column;
+            gap: 30px;
         }
 
         /* Individual Floating Boxes */
@@ -52,7 +52,7 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 25px;
             border-radius: 12px;
-            backdrop-filter: blur(15px); /* Stronger blur for readability */
+            backdrop-filter: blur(15px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
@@ -67,13 +67,13 @@
         /* Section Titles */
         h2 {
             font-size: 26px;
-            color: #FFD700; /* Gold */
+            color: #FFD700;
             margin-bottom: 15px;
             transition: color 0.3s ease;
         }
 
         .section:hover h2 {
-            color: #A8D8EA; /* Soft Blue */
+            color: #A8D8EA;
         }
 
         /* Text Styling */
@@ -98,7 +98,7 @@
             content: "•";
             position: absolute;
             left: 0;
-            color: #FFD700; /* Gold */
+            color: #FFD700;
             font-size: 20px;
         }
 
@@ -122,11 +122,33 @@
             transform: scale(1.05);
         }
 
-        /* Image Styling */
-        .section img {
-            width: 100%;
+        /* PDF and Notion Access Form */
+        .access-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .access-form input {
+            padding: 10px;
             border-radius: 8px;
-            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            color: #F1F1F1;
+            margin-right: 10px;
+        }
+
+        .access-form button {
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #F1F1F1;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .access-form button:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
@@ -138,42 +160,74 @@
 
         <div class="section-container">
             
-            <div class="section" onclick="window.location.href='#';">
+            <div class="section" onclick="window.location.href='looking-forward.html';">
                 <h2>What I'm Looking Forward To</h2>
                 <ul>
-                    <li>Lab research & university outreach: I am eager to dive into hands-on experiments and collaborate with academic institutions to expand my knowledge.</li>
+                    <li>Lab research, work experiences & university outreach: I am currently looking forward to engaging in hands-on work in health and engineering.</li>
                     <li>Finding mentors for research: Connecting with experienced researchers to guide me in my scientific journey is a top priority.</li>
                     <li>Publishing my books: I am working on a series of books that explore the intersection of science, philosophy, and creativity.</li>
                 </ul>
             </div>
 
-            <div class="section" onclick="window.location.href='#';">
+            <div class="section" onclick="window.location.href='projects.html';">
                 <h2>Projects</h2>
-                <p>I am currently running an English tutoring business, helping students improve their language skills and achieve academic success. Additionally, I am actively seeking research opportunities in biomedical sciences and aerospace engineering to contribute to groundbreaking discoveries.</p>
-                <p>One of my ongoing projects involves developing a machine learning model to analyze biological data, which could revolutionize personalized medicine.</p>
+                <p>I am currently running an English tutoring business, helping students improve their language skills and achieve academic success. Outside of school, this is my primary focus, and I’m dedicated to making a positive impact through education.</p>
             </div>
 
-            <div class="section" onclick="window.location.href='#';">
-                <h2>Blog 📓</h2>
-                <p>Welcome to my blog! Here, I share my thoughts on a wide range of topics, including the latest advancements in science, the mysteries of space, and the beauty of literature. Stay tuned for regular updates and deep dives into fascinating subjects.</p>
-                <p>Upcoming posts: "The Future of AI in Medicine" and "Exploring the Cosmos: A Journey Through Space and Time."</p>
-            </div>
-
-            <div class="section" onclick="window.location.href='#';">
-                <h2>Education 🧑‍🏫</h2>
+            <div class="section" onclick="window.location.href='education.html';">
+                <h2>Education �‍🏫</h2>
                 <p>I am currently preparing for the VCE (Victorian Certificate of Education) with a focus on subjects like mathematics, physics, and chemistry. My future academic goals include pursuing studies in neuroscience, AI-driven bioengineering, and aerospace research.</p>
                 <p>I am particularly interested in how artificial intelligence can be integrated into biological systems to solve complex problems and improve human health.</p>
             </div>
 
-            <div class="section" onclick="window.location.href='mailto:lingeshinice@outlook.com';">
+            <div class="section" onclick="window.location.href='contact.html';">
                 <h2>Contact Me 📇</h2>
                 <p>If you're interested in collaborating on a project, discussing ideas, or just want to connect, feel free to reach out. I'm always open to new opportunities and conversations.</p>
                 <a href="mailto:lingeshinice@outlook.com" class="button">Email Me</a>
+            </div>
+
+            <!-- Notion Page Access Section -->
+            <div class="section">
+                <h2>Notion Page</h2>
+                <p>Access my Notion page by entering the activation code below:</p>
+                <div class="access-form">
+                    <input type="text" id="notionCode" placeholder="Enter Activation Code">
+                    <button onclick="accessNotion()">Submit</button>
+                </div>
+            </div>
+
+            <!-- PDF Resume Section -->
+            <div class="section">
+                <h2>Resume</h2>
+                <p>Access my resume by entering the activation code below:</p>
+                <div class="access-form">
+                    <input type="text" id="resumeCode" placeholder="Enter Activation Code">
+                    <button onclick="accessResume()">Submit</button>
+                </div>
             </div>
 
         </div>
 
     </div>
 
+    <script>
+        function accessNotion() {
+            const code = document.getElementById('notionCode').value;
+            if (code === "LOTR@linge") {
+                window.location.href = 'https://www.notion.so/2025-2-1953495a459d805e9f42e2a3e421c3e5?pvs=4'; // Your Notion page link
+            } else {
+                alert("Incorrect activation code. Please try again.");
+            }
+        }
+
+        function accessResume() {
+            const code = document.getElementById('resumeCode').value;
+            if (code === "LOTR@linge") {
+                window.location.href = 'resume.pdf'; // Replace with the path to your PDF
+            } else {
+                alert("Incorrect activation code. Please try again.");
+            }
+        }
+    </script>
 </body>
 </html>
