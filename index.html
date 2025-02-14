@@ -3,269 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Universe</title>
-    <style>
-        /* General Styling */
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #1a1a1a; /* Dark background */
-            color: #F1F1F1;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            padding-top: 50px;
-        }
-
-        /* Container for content */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            padding: 30px;
-            background: rgba(0, 0, 0, 0.8); /* Darker background for contrast */
-            border-radius: 15px;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-            margin-bottom: 50px;
-        }
-
-        h1 {
-            font-size: 50px;
-            text-align: center;
-            color: #FFD700; /* Gold */
-            font-family: 'Garamond', serif;
-            margin-bottom: 20px;
-        }
-
-        /* Zigzag Divider */
-        .zigzag {
-            position: relative;
-            height: 20px;
-            background: linear-gradient(135deg, #FFD700 25%, transparent 25%) -20px 0,
-                        linear-gradient(225deg, #FFD700 25%, transparent 25%) -20px 0,
-                        linear-gradient(315deg, #FFD700 25%, transparent 25%),
-                        linear-gradient(45deg, #FFD700 25%, transparent 25%);
-            background-size: 40px 40px;
-            margin: 30px 0;
-        }
-
-        /* Section Grid */
-        .section-container {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        /* Individual Floating Boxes */
-        .section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 12px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Section Titles */
-        h2 {
-            font-size: 26px;
-            color: #FFD700;
-            margin-bottom: 15px;
-            transition: color 0.3s ease;
-        }
-
-        .section:hover h2 {
-            color: #A8D8EA; /* Soft Blue */
-        }
-
-        /* Text Styling */
-        p, ul {
-            font-size: 16px;
-            line-height: 1.7;
-            text-align: justify;
-            color: #F1F1F1;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            padding-left: 20px;
-            position: relative;
-        }
-
-        li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #FFD700;
-            font-size: 20px;
-        }
-
-        /* Button Styling */
-        .button {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #F1F1F1;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 8px;
-            display: inline-block;
-            text-align: center;
-            margin-top: 15px;
-            transition: background 0.3s ease, transform 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .button:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.05);
-        }
-
-        /* Crow Icons */
-        .crow-icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        /* Access Form */
-        .access-form {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .access-form input {
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            background: rgba(255, 255, 255, 0.1);
-            color: #F1F1F1;
-            margin-right: 10px;
-        }
-
-        .access-form button {
-            padding: 10px 20px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #F1F1F1;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .access-form button:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-    </style>
+    <title>FOLIO | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <header>
+        <h1>FOLIO</h1>
+        <p>Welcome to my world of science, creativity, and innovation.</p>
+        <img src="images/crow.png" alt="Cute Crow">
+    </header>
 
-    <div class="container">
-        <h1>My Universe 🌌</h1>
-        <p style="text-align: center;">A fusion of art, science, and imagination.</p>
+    <section class="zigzag"></section>
 
-        <div class="zigzag"></div>
+    <section id="about">
+        <h2>ABOUT ME</h2>
+        <p>Hello there! I'm a passionate learner exploring the intersection of science and technology.</p>
+        <a href="about.html" class="btn">Learn More</a>
+    </section>
 
-        <div class="section-container">
-            
-            <!-- About Me Section -->
-            <div class="section" onclick="window.location.href='about-me.html';">
-                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">About Me</h2>
-                <p>Hello there! I'm a passionate individual exploring the intersections of science, art, and technology. Click here to learn more about me.</p>
-            </div>
+    <section class="zigzag"></section>
 
-            <div class="zigzag"></div>
+    <section id="education">
+        <h2>EDUCATION</h2>
+        <p>Dedicated to expanding knowledge in mathematics, physics, and automation.</p>
+        <a href="education.html" class="btn">Explore</a>
+    </section>
 
-            <!-- Education Section -->
-            <div class="section" onclick="window.location.href='education.html';">
-                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">Education</h2>
-                <p>Currently preparing for the VCE with a focus on mathematics, physics, and chemistry. Click here to explore my academic journey.</p>
-            </div>
+    <section class="zigzag"></section>
 
-            <div class="zigzag"></div>
+    <section id="projects">
+        <h2>What am I working on?</h2>
+        <p>Discover my latest projects and innovations.</p>
+        <a href="projects.html" class="btn">See More</a>
+    </section>
 
-            <!-- Projects Section -->
-            <div class="section" onclick="window.location.href='projects.html';">
-                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">Projects</h2>
-                <p>I run an English tutoring business and am dedicated to helping students achieve academic success. Click here to see my projects.</p>
-            </div>
+    <section class="zigzag"></section>
 
-            <div class="zigzag"></div>
+    <section id="future">
+        <h2>What am I looking forward to?</h2>
+        <p>Exciting future plans and upcoming projects.</p>
+        <a href="future.html" class="btn">Check It Out</a>
+    </section>
 
-            <!-- Looking Forward Section -->
-            <div class="section" onclick="window.location.href='looking-forward.html';">
-                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">What I'm Looking Forward To</h2>
-                <p>Lab research, finding mentors, and publishing my books. Click here to see my future goals.</p>
-            </div>
+    <section class="zigzag"></section>
 
-            <div class="zigzag"></div>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Let's connect and create something amazing.</p>
+        <a href="contact.html" class="btn">Get in Touch</a>
+    </section>
 
-            <!-- Contact Me Section -->
-            <div class="section" onclick="window.location.href='contact.html';">
-                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">Contact Me</h2>
-                <p>Feel free to reach out for collaborations or conversations. Click here to contact me.</p>
-                <a href="mailto:lingeshinice@outlook.com" class="button">Email Me</a>
-            </div>
+    <section class="zigzag"></section>
 
-            <div class="zigzag"></div>
+    <section id="secret">
+        <h2>Look what you found!!</h2>
+        <button onclick="unlockNotion()">Enter Activation Code</button>
+        <p id="notionMessage"></p>
+    </section>
 
-            <!-- Notion Page Access Section -->
-            <div class="section">
-                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">Notion Page</h2>
-                <p>Access my Notion page by entering the activation code below:</p>
-                <div class="access-form">
-                    <input type="text" id="notionCode" placeholder="Enter Activation Code">
-                    <button onclick="accessNotion()">Submit</button>
-                </div>
-            </div>
-
-            <div class="zigzag"></div>
-
-            <!-- Resume Access Section -->
-            <div class="section">
-                <h2><img src="crow-icon.png" alt="Crow Icon" class="crow-icon">Resume</h2>
-                <p>Access my resume by entering the activation code below:</p>
-                <div class="access-form">
-                    <input type="text" id="resumeCode" placeholder="Enter Activation Code">
-                    <button onclick="accessResume()">Submit</button>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <script>
-        function accessNotion() {
-            const code = document.getElementById('notionCode').value;
-            if (code === "LOTR@linge") {
-                window.location.href = 'https://www.notion.so/2025-2-1953495a459d805e9f42e2a3e421c3e5?pvs=4'; // Your Notion page link
-            } else {
-                alert("Incorrect activation code. Please try again.");
-            }
-        }
-
-        function accessResume() {
-            const code = document.getElementById('resumeCode').value;
-            if (code === "LOTR@linge") {
-                window.location.href = 'resume.pdf'; // Replace with the path to your PDF
-            } else {
-                alert("Incorrect activation code. Please try again.");
-            }
-        }
-    </script>
+    <footer>
+        <p>&copy; 2025 Your Name | Designed with Passion</p>
+        <img src="images/octopus.png" alt="Cute Octopus">
+    </footer>
 </body>
 </html>
